@@ -1,0 +1,247 @@
+// `xxl` applies to x-large devices (large desktops, less than 1400px
+@media (max-width: 1599.98px) { 
+    .container {
+        padding: 15px;
+    }
+    .header {
+        &__location {
+            max-width: 280px;
+        }
+        &__contacts {
+            & .link {
+                margin-right: 32px;
+            }
+        }
+        & .nav__item {
+            margin-right: 32px;
+            &:last-child {
+                margin-right: 48px;
+            }
+        }
+    }
+    
+}
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 992px;
+    }
+    .header {
+        & .logo {
+            padding-right: 15px;
+        }
+        &__location {
+            display: none;
+        }
+        &__contacts {
+            & .link {
+                margin-right: 0px;
+            }
+        }
+    }
+
+   
+    
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .container {
+        max-width: 768px;
+    }
+    .header {
+        &__contacts {
+            max-width: 150px;
+            justify-content: flex-end;
+            flex-wrap: wrap-reverse;
+            & .link {
+                margin-right: 0px;
+                &::after {
+                    width: 0;
+                }
+            }
+            & .icon-link:nth-child(2) {
+                margin-right: 0px;
+            }
+        }
+        & .nav__item {
+            margin-right: 24px;
+            &:last-child {
+                margin-right: 32px;
+            }
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+    }
+    .header {
+        &__contacts {
+            display: none;
+        }
+        & .nav__item {
+            margin-right: 24px;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+    .hero {
+        padding: 60px 0;
+        &__title {
+            font-size: 48px;
+            &::after {
+                bottom: -30px;
+            }
+            margin-bottom: 60px;
+        }
+        &__text {
+            margin-bottom: 60px;
+        }
+        &__button {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+@media (max-width: 579.98px) {
+    
+    .header {
+        &__menu {
+            position: absolute;
+            bottom: -120px;
+            left: -800px;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .5s ease;
+        }
+        & .logo {
+            padding: 0 0 0 30px;
+            order: 1;
+        }
+        & .link-price {
+            display: flex;
+            order: 3;
+        }
+    }
+   
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header .hamburger-label {
+        position: relative;
+        display: flex;
+        width: 21px;
+        height: 10px;
+        flex-direction: column;
+        order: 0;
+        align-items: center;
+        
+        cursor: pointer;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 2px;
+            background: #000;
+            transition: all .5s ease;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 0;
+            width: 20px;
+            height: 2px;
+            background: #000;
+            transition: all .5s ease;
+        }
+    }
+    .hamburger-span {
+        width: 20px;
+        height: 2px;
+        margin-bottom: 5px;
+        background: #000;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    #hamburger:checked ~ .header__menu {
+        position: absolute;
+        bottom: -180px;
+        left: 0;
+        max-height: 150%;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        font-size: 24px;
+        .nav__item {
+            margin: 0 0 8px 0;
+        }
+    }
+
+    #hamburger:checked ~ .hamburger-label {
+        &::after {
+            content: '';
+            top: 0;
+            right: 0;
+            transform: rotate(45deg);
+            transition: all .5s ease;
+        }
+        &::before {
+            content: '';
+            top: 0;
+            right: 0;
+            transform: rotate(-45deg);
+            transition: all .5s ease;
+        }
+    }
+
+    .hero {
+        height: 40%;
+        padding: 72px 0 40px;
+        &__title {
+            font-size: 30px;
+            &::after {
+                bottom: -24px;
+            }
+            margin-bottom: 48px;
+        }
+        &__text {
+            margin-bottom: 56px;
+        }
+        &__button {
+            margin-bottom: 56px;
+        }
+    }
+    
+}
+
+@media (max-width: 320px) { 
+    .hero {
+        height: 32%;
+        padding: 48px 0 24px;
+        &__title {
+            font-size: 28px;
+            &::after {
+                bottom: -24px;
+            }
+            margin-bottom: 48px;
+        }
+        &__text {
+            margin-bottom: 48px;
+        }
+        &__button {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+
