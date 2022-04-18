@@ -1,0 +1,11 @@
+.offers {
+    &__title {
+        max-width: 524px;
+        margin: 0 auto;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 650px 650px;
+        height: 100%;
+    }
+}

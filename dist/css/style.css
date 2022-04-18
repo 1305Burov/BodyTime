@@ -225,7 +225,8 @@ template {
 }
 
 .section {
-  padding: 176px 0;
+  margin: 176px 0;
+  text-align: center;
 }
 
 .button {
@@ -411,10 +412,6 @@ template {
   }
 }
 
-.about {
-  text-align: center;
-}
-
 .about__cards {
   display: flex;
   align-items: flex-start;
@@ -438,6 +435,17 @@ template {
 .about .card__img {
   max-width: 104px;
   height: auto;
+}
+
+.offers__title {
+  max-width: 524px;
+  margin: 0 auto;
+}
+
+.offers__content {
+  display: grid;
+  grid-template-columns: 650px 650px;
+  height: 100%;
 }
 
 @media (max-width: 1599.98px) {
@@ -510,6 +518,34 @@ template {
   .header .nav__item:last-child {
     margin-right: 32px;
   }
+
+  .about {
+    text-align: center;
+    padding: 72px 0;
+  }
+
+  .about__cards {
+    flex-wrap: wrap;
+  }
+
+  .about__title {
+    margin: 0 0 40px;
+  }
+
+  .about .card {
+    max-width: 240px;
+    margin: 32px 0 0 0;
+  }
+
+  .about .card__text {
+    margin: 32px 0 0 0;
+    font-size: 20px;
+  }
+
+  .about .card__img {
+    max-width: 104px;
+    height: auto;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -548,6 +584,30 @@ template {
 
   .hero__button {
     margin-bottom: 80px;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .about__cards {
+    display: flex;
+    align-items: center;
+  }
+
+  .about .card {
+    max-width: 240px;
+    margin-right: 0;
+  }
+
+  .about .card__text {
+    margin: 32px 0 0 0;
+    font-size: 20px;
+  }
+
+  .about .card__img {
+    max-width: 104px;
+    height: auto;
   }
 }
 

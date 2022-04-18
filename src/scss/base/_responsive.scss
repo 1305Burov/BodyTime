@@ -49,6 +49,7 @@
     .container {
         max-width: 768px;
     }
+    
     .header {
         &__contacts {
             max-width: 150px;
@@ -68,6 +69,28 @@
             margin-right: 24px;
             &:last-child {
                 margin-right: 32px;
+            }
+        }
+    }
+    .about {
+        text-align: center;
+        padding: 72px 0;
+        &__cards {
+           flex-wrap: wrap;
+        }
+        &__title {
+            margin: 0 0 40px;
+        }
+        & .card {
+            max-width: 240px;
+            margin: 32px 0 0 0;
+            &__text {
+                margin: 32px 0 0 0;
+                font-size: 20px;
+            }
+            &__img {
+                max-width: 104px;
+                height: auto;
             }
         }
     }
@@ -103,6 +126,26 @@
         }
         &__button {
             margin-bottom: 80px;
+        }
+    }
+
+    .about {
+        text-align: center;
+        &__cards {
+            display: flex;
+            align-items: center;
+        }
+        & .card {
+            max-width: 240px;
+            margin-right: 0;
+            &__text {
+                margin: 32px 0 0 0;
+                font-size: 20px;
+            }
+            &__img {
+                max-width: 104px;
+                height: auto;
+            }
         }
     }
 }
