@@ -210,12 +210,6 @@ template {
   line-height: 1.5;
 }
 
-.body :focus {
-  outline: 1px solid #363431;
-  outline-offset: 5px;
-  border-radius: 5px;
-}
-
 .container {
   max-width: 1600px;
   width: 100%;
@@ -264,6 +258,71 @@ template {
   font-weight: 400;
   font-size: 48px;
   color: #363431;
+}
+
+.swiper {
+  max-width: 1328px;
+  width: 100%;
+  height: 424px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.swiper__pagination {
+  width: 16px;
+  height: 16px;
+  background-color: #363431;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.slide__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 32px;
+  text-align: left;
+}
+
+.slide__price {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 32px 0;
+  color: #74b900;
+}
+
+.slide__price .price-discount {
+  margin: 0;
+  font-size: 32px;
+}
+
+.slide__price .price-full {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  text-decoration: line-through;
+}
+
+.slide__img {
+  width: 642px;
+  height: auto;
+}
+
+.slide__title {
+  margin: 0 0 32px 0;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.slide__text {
+  max-width: 512px;
+  margin: 0 0 24px 0;
+  font-size: 18px;
+}
+
+.slide__button {
+  font-size: 18px;
 }
 
 .header {
@@ -433,8 +492,10 @@ template {
 }
 
 .about .card__img {
-  max-width: 104px;
-  height: auto;
+  width: 104px;
+  height: 104px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .offers__title {
@@ -507,6 +568,12 @@ template {
 
 .box {
   background: green;
+}
+
+.discounts {
+  padding: 176px 0;
+  text-align: center;
+  background-color: #f3f3f3;
 }
 
 @media (max-width: 1599.98px) {

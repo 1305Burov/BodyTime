@@ -15,8 +15,9 @@
             margin-right: 0;
         }
         &__img {
-            max-width: 104px;
-            height: auto;
+            width: 104px;
+            height: 104px;
+            object-fit: cover;
         }
     }
 }
