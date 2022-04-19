@@ -40,7 +40,24 @@
         }
     }
 
-   
+    .offers {
+        margin: 72px 0;
+        &__content {
+            gap: 16px;
+        }
+        & .offer {
+            &__text {
+                font-size: 22px;
+            }
+            &:nth-child(2) {
+                grid-template-rows: repeat(3, 1fr);
+                gap: 16px;
+            }
+            .middle {
+                grid-column: 1;
+            } 
+        }
+    }
     
 }
 
@@ -74,7 +91,7 @@
     }
     .about {
         text-align: center;
-        padding: 72px 0;
+        margin: 72px 0;
         &__cards {
            flex-wrap: wrap;
         }
@@ -94,6 +111,7 @@
             }
         }
     }
+    
 }
 
 // `md` applies to small devices (landscape phones, less than 768px)
@@ -111,6 +129,10 @@
                 margin-right: 0px;
             }
         }
+    }
+
+    .section__title {
+        font-size: 32px;
     }
     .hero {
         padding: 60px 0;
@@ -145,6 +167,40 @@
             &__img {
                 max-width: 104px;
                 height: auto;
+            }
+        }
+    }
+    .offers {
+        &__content {
+            // grid-template-rows: repeat(6, 144px);
+            grid-template-rows: 144px 465px;
+        }
+        &__title {
+            margin: 0 0 72px 0 ;
+        }
+        & .offer {
+            text-align: center;
+            &__text {
+                font-size: 18px;
+                padding: 24px;
+            }
+            &:nth-child(2) {
+                grid-template-rows: repeat(3, 144px);
+            }
+            &:nth-child(1) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 144px;
+            }
+            .middle {
+                align-items: center;
+                justify-content: center;
+            }
+            .small {
+                & .offer__text {
+                    max-width: 260px;
+                }
             }
         }
     }
