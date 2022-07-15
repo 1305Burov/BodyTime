@@ -111,7 +111,51 @@
             }
         }
     }
-    
+
+    .discounts {
+        padding: 80px 0;
+    }
+
+    .swiper {
+        height: 640px;
+        border-radius: 8px;
+        &-slide {
+            display: flex;
+            max-height: 548px;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        &-button-next, .swiper-button-prev {
+            width: 48px;
+            height: 48px;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            margin: 0 64px;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin : 0 var(--swiper-pagination-bullet-horizontal-gap,8px);
+        }
+       
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+        }
+    }
+    .slide {
+        &__content {
+            padding: 21px 0px;
+        }
+        &__text, &__title, &__price {
+            margin: 0 0 16px 0;
+        }
+        &__img {
+            max-width: 100%;
+            width: 100%;
+            max-height: 280px;
+            object-fit: cover;
+        }
+    }
 }
 
 // `md` applies to small devices (landscape phones, less than 768px)
@@ -176,7 +220,7 @@
             grid-template-rows: 144px 465px;
         }
         &__title {
-            margin: 0 0 72px 0 ;
+            margin: 0 0 40px 0 ;
         }
         & .offer {
             text-align: center;
@@ -202,6 +246,41 @@
                     max-width: 260px;
                 }
             }
+        }
+    }
+
+    .discounts__title {
+        margin-bottom: 40px;
+    }
+    .swiper {
+        height: 480px;
+        &-slide {
+            max-height: 400px;
+        }
+        
+    }
+
+    .slide {
+        &__content {
+            padding: 16px;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+        &__price {
+            & .price-discount {
+                font-size: 24px;
+            }
+
+            & .price-full {
+                font-size: 12px;
+            }
+        } 
+        &__img {   
+            max-height: 180px;
         }
     }
 }
@@ -232,6 +311,7 @@
         flex-direction: column;
         align-items: center;
     }
+    
     .header .hamburger-label {
         position: relative;
         display: flex;
@@ -340,6 +420,20 @@
         &__button {
             margin-bottom: 48px;
         }
+    }
+
+    .swiper {
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            margin: 0 32px;
+        }
+    }
+
+    .swiper {
+        height: 490px;
+        &-slide {
+            max-height: 415px;
+        }
+        
     }
 }
 

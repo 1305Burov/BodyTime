@@ -1,19 +1,71 @@
 .swiper {
     max-width: 1328px;
     width: 100%;
-    height: 424px;
+    height: 536px;
     // padding: 0 0 112px 0;
-    background-color: $bg_color;
     border-radius: 16px;
+    &-pagination {
+        position: initial;
+    }
     &__pagination {
         width: 16px;
         height: 16px;
         background-color: #363431;
     }
+    &__navigation {
+        position: relative;
+        top: -64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &-slide {
         display: flex;
+        max-height: 424px;
+        background-color: $bg_color;
     }
-     
+    &-button-next, .swiper-button-prev {
+        position: initial;
+        top: 0;
+        width: 64px;
+        height: 64px;
+        margin-top: 0;
+        background: url('../img/slider-img/slider-arrow.png') center no-repeat, $bg_color;
+        border-radius: 50%;
+    }
+
+    &-button-prev::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    &-button-next {
+        transform: rotate(180deg);
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        width: auto;
+        margin: 0 124px;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin : 0 var(--swiper-pagination-bullet-horizontal-gap,24px);
+    }
+    .swiper-pagination-bullet-active {
+        background: $text_color;
+    }
+
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+    }
+    
 }
 
 .slide {
@@ -43,7 +95,7 @@
         }
     }
     &__img {
-        width: 642px;
+        max-width: 642px;
         height: auto;
     }
     &__title {
