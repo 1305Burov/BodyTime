@@ -1,0 +1,64 @@
+.modals {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0, .5);
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .5s ease;
+    &__callback {
+        padding: 72px 60px;
+        text-align: center;
+    }
+    &__heading {
+        margin-bottom: 48px;
+        font-size: 32px;
+        color: $text_color;
+    }
+    &__form {
+        & input {
+            display: block;
+            width: 100%;
+            padding: 20px 16px;
+            border: 1px solid #b2b2b2;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+        & button {
+            padding: 20px 60px;
+            background-color: transparent;
+            border: 1px solid $accent_color;
+            border-radius: 8px;
+            color: $accent_color;
+            cursor: pointer;
+        }
+    }
+    &_hidden {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &__callback {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 512px;
+        width: 90%;
+        height: 480px;
+        background: $bg_color;
+        border-radius: 16px;
+        &::after {
+            content: 'X';
+            position: absolute;
+            top: -64px;
+            right: 0;
+            font-size: 24px;
+            font-weight: 900;
+            color: #fff;
+            pointer-events: none;
+        }
+    }
+}

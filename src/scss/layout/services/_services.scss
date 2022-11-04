@@ -1,0 +1,59 @@
+.services {
+    &__filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 48px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, calc(50% - 16px)));
+        gap: 32px;
+        & .service {
+            margin-bottom: 32px;
+            padding-top: 58%;
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+            border-radius: 16px;
+            color: $text_color;
+            &__content {
+                height: 100%;
+                padding: 48px;
+                background: #F9F9F9;
+                border-radius: 0 0 16px 16px;
+                text-align: left;
+            }
+            &__heading {
+                margin-bottom: 24px;
+                font-size: 32px;
+                font-weight: 400;
+            }
+            & .price {
+                max-width: 420px;
+                margin-bottom: 16px;
+                font-size: 20px;
+                line-height: 130%;
+                & > sub {
+                    font-size: 16px;
+                    text-decoration: line-through;
+                }
+                & > a {
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -8px;
+                        width: 100%;
+                        border-bottom: 1px solid #4E4D4D;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+

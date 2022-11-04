@@ -5,7 +5,9 @@
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+            scroll-behavior: smooth;
   }
+
 
   *,
     *::before,
@@ -13,17 +15,18 @@
         -webkit-box-sizing: inherit;
            -moz-box-sizing: inherit;
                 box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     } 
-  
-  body {
-    margin: 0;
-    padding: 0;
-  }
   
   main {
     display: block;
   }
   
+  ul {
+    list-style: none;
+  }
  
   h1 {
     font-size: 2em;
@@ -45,6 +48,8 @@
 
   a {
     background-color: transparent;
+    text-decoration: none;
+    color: inherit;
   }
   
  
@@ -80,10 +85,6 @@
     line-height: 0;
     position: relative;
     vertical-align: baseline;
-  }
-  
-  sub {
-    bottom: -0.25em;
   }
   
   sup {

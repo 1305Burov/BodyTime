@@ -1,3 +1,31 @@
 .main {
-  
+    &__linkrout {
+        display: flex;
+        margin: 24px auto 112px auto;
+        padding: 0;
+        list-style: none;
+
+        & .linkrout {
+            &__item {
+                &::after {
+                    content: '―';
+                    display: inline-block;
+                    margin: 0 8px;
+                }
+                &_active {
+                    color: $accent_color;
+                    user-select: none;
+                    &::after {
+                        display: none;
+                    }
+                }
+                & > a {
+                    text-decoration: none;
+                    &:visited {
+                        color: $text_color;
+                    }
+                }
+            }
+        }
+    }
 }

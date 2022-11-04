@@ -11,6 +11,13 @@
         align-items: center;
         justify-content: space-between;
     }
+    & .logo {
+        & > img {
+            max-width: 157px;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
     &__menu {
         display: flex;
         align-items: center;

@@ -156,6 +156,16 @@
             object-fit: cover;
         }
     }
+
+    .footer {
+        font-size: 14px;
+        &__list {
+            gap: 24px;
+        } 
+        &__text {
+            font-size: 12px;
+        }
+    }
 }
 
 // `md` applies to small devices (landscape phones, less than 768px)
@@ -283,10 +293,56 @@
             max-height: 180px;
         }
     }
+
+    .footer {
+        height: 100%;
+        padding: 40px 16px;
+        &__list {
+            grid-template-columns: auto;
+            & .list {
+                &__item {
+                    &:first-child {
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        order: 1;
+                        & > .list__socials {
+                            order: 1;
+                        }
+                    }
+                }
+            }
+            
+        } 
+        &__text-box {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 @media (max-width: 579.98px) {
-    
+    .prices {
+        &__services-list {
+            & .list {
+                &__item {
+                    max-height: 84px;
+                    & .item {
+                        &__heading {
+                            font-size: 18px;
+                            text-align: left;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &__list {
+            & li {
+                padding: 24px;
+            }
+        }
+    }
+
     .header {
         &__menu {
             position: absolute;
@@ -354,7 +410,7 @@
     }
     #hamburger:checked ~ .header__menu {
         position: absolute;
-        bottom: -180px;
+        bottom: -175px;
         left: 0;
         max-height: 150%;
         justify-content: center;
@@ -400,7 +456,34 @@
             margin-bottom: 56px;
         }
     }
-    
+    .footer {
+        height: 100%;
+        padding: 40px 16px;
+        &__list {
+            grid-template-columns: 1fr;
+            & .list {
+                &__item {
+                    &:first-child {
+                        display: block;
+                    }
+                    &:last-child {
+                       & .subscribe {
+                            &__email {
+                                width: 70%;
+                            }
+                            &__btn {
+                                width: 30%;
+                            }
+                       } 
+                    }
+                }
+            }
+            
+        } 
+        &__text-box {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 @media (max-width: 320px) { 

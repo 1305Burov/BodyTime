@@ -4,9 +4,17 @@
 @import "base/general.scss";
 @import "base/responsive.scss";
 @import "components/slider.scss";
+@import "components/modals.scss";
+@import "components/select.scss";
+@import "components/search.scss";
 @import "layout/header.scss";
+@import "layout/footer.scss";
 @import "layout/main.scss";
 @import "layout/hero.scss";
 @import "layout/about.scss";
 @import "layout/offers.scss";
 @import "layout/discounts.scss";
+@import "layout/prices/prices.scss";
+@import "layout/contacts/contacts.scss";
+@import "layout/services/services.scss";
+@import "layout/services/responsive.scss";

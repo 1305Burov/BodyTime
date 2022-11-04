@@ -1,0 +1,87 @@
+.prices {
+    &__wrapper {
+        max-width: 1328px;
+        margin: 0 auto;
+    }
+    &__list-header {
+        display: flex;
+        padding: 24px;
+        justify-content: space-between;
+        border: 0.5px solid #4E4D4D;
+    }
+    &__services-list {
+        & .list {
+            &__item {
+                max-height: 76px;
+                background-color: #f9f9f9;
+                overflow: hidden;
+                transition: max-height .5s ease;
+                &:nth-child(2n) {
+                    background-color: #f3f3f3;
+                }
+                & .item {
+                    &__heading {
+                        font-weight: 400;
+                        font-size: 24px;
+                        color: $text_color;
+                    }
+                    &__content {
+                        display: flex;
+                        padding: 24px;
+                        align-items: center;
+                        justify-content: space-between;
+                        cursor: pointer;
+                    }
+                    &__btn {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: 24px;
+                        height: 24px;
+                        background-color: transparent;
+                        border: 1px solid #4E4D4D;
+                        border-radius: 50%;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 12px;
+                            height: 2px;
+                            background-color: #4E4D4D;
+                            transition: transform .4s ease;
+                        }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 2px;
+                            height: 12px;
+                            background-color: #4E4D4D;
+                            transition: transform .5s ease;
+                        }
+                        &_open {
+                            &::after {
+                                content: '';
+                                transform: rotate(180deg);
+                            }
+                            &::before {
+                                content: '';
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__list {
+        & li {
+            display: flex;
+            padding: 24px 104px;
+            justify-content: space-between;
+            &:hover {
+                color: $accent_color;
+                cursor: pointer;
+            }
+        }
+    }
+}

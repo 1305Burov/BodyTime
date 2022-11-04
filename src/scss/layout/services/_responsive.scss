@@ -1,0 +1,65 @@
+@media (max-width: 991.98px) { 
+    .services {
+        & .service {
+            &__heading {
+                font-size: 24px;
+            }
+            &__content {
+                padding: 24px;
+            }
+            & .price {
+                margin-bottom: 12px;
+                font-size: 16px;
+                & > sub {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    
+    .main__linkrout {
+        margin-bottom: 72px;
+    }
+    .services {
+        margin: 72px 0;
+        &__list {
+            grid-template-columns: repeat(auto-fill, minmax(100%, calc(50% - 16px)));
+        }
+    }
+
+    .search {
+        &__input {
+            &:focus {
+                width: 60%;
+            }
+        }
+        &__button {
+            &:focus {
+                & ~ .search__input {
+                    width: 60%;
+                }
+            }
+        }
+    
+    }
+
+    .select {
+        &__current {
+            padding: 15px;
+            border: 0;
+            background-image: url('../../../img/icons/filter.png');
+            background-repeat: no-repeat;
+            & > span {
+                display: none;
+            }
+        }
+        &__icon {
+            display: none;
+        }
+    }
+}
+
