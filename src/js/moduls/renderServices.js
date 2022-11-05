@@ -5,7 +5,7 @@ export const renderServices = (filter = []) => {
     const servicesHTML = servicesList.reduce((prev, service) => {
         if (filter.length) {
             if (filter === service.filter || service.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
-                return prev += `<li class="service" style="background-image: url(../../img/services/${service.img});">
+                return prev += `<li class="service" style="background-image: url(./img/services/${service.img});">
                 <div class="service__content">
                 <h3 class="service__heading">${service.name}</h3>
                 <ul class="service__prices">
@@ -20,7 +20,7 @@ export const renderServices = (filter = []) => {
                 </li>`;
             }
         }else {
-            return prev += `<li class="service" style="background-image: url(../../img/services/${service.img});">
+            return prev += `<li class="service" style="background-image: url(./img/services/${service.img});">
                 <div class="service__content">
                 <h3 class="service__heading">${service.name}</h3>
                 <ul class="service__prices">
